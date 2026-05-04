@@ -1,0 +1,147 @@
+/* ============================================
+   DESIGN TOKENS - TechSolutions Website
+   ============================================
+   
+   Quick reference for colors, typography, and spacing
+   used throughout the website. Use these values to
+   maintain consistency when adding new components.
+============================================ */
+
+/* COLORS */
+:root {
+    /* Primary Brand Colors */
+    --color-primary: #ec4899;        /* Pink - CTA buttons, accents */
+    --color-primary-dark: #db2777;   /* Darker pink - hover states */
+    
+    /* Neutral Colors */
+    --color-dark: #1e293b;           /* Dark navy - headings, dark text */
+    --color-dark-alt: #0f172a;       /* Darker navy - hover states */
+    --color-text: #475569;           /* Medium gray - body text */
+    --color-text-light: #64748b;     /* Light gray - secondary text */
+    
+    /* Success/Accent */
+    --color-success: #10b981;        /* Green - badges, positive stats */
+    
+    /* Backgrounds */
+    --color-bg-white: #ffffff;       /* Pure white */
+    --color-bg-light: #f8fafc;       /* Light gray background */
+    --color-bg-lighter: #f1f5f9;     /* Lighter gray background */
+    --color-bg-border: #e2e8f0;      /* Border color */
+    --color-bg-input: #cbd5e1;       /* Input/inactive states */
+    
+    /* TYPOGRAPHY */
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    
+    /* Font Sizes */
+    --font-size-hero: 3.5rem;        /* 56px - Main hero title */
+    --font-size-h1: 2.5rem;          /* 40px */
+    --font-size-h2: 2rem;            /* 32px */
+    --font-size-h3: 1.5rem;          /* 24px */
+    --font-size-body: 1.15rem;       /* 18.4px - Hero description */
+    --font-size-base: 1rem;          /* 16px - Default */
+    --font-size-small: 0.95rem;      /* 15.2px - Nav links */
+    --font-size-tiny: 0.85rem;       /* 13.6px - Card text */
+    
+    /* Font Weights */
+    --font-weight-bold: 800;         /* Hero titles */
+    --font-weight-semibold: 700;     /* Logo, stats */
+    --font-weight-medium: 600;       /* Buttons, badges */
+    --font-weight-regular: 500;      /* Nav links, labels */
+    
+    /* Line Heights */
+    --line-height-tight: 1.2;        /* Headlines */
+    --line-height-normal: 1.6;       /* Body text */
+    --line-height-relaxed: 1.7;      /* Hero description */
+    
+    /* SPACING */
+    --spacing-xs: 0.5rem;            /* 8px */
+    --spacing-sm: 0.75rem;           /* 12px */
+    --spacing-md: 1rem;              /* 16px */
+    --spacing-lg: 1.5rem;            /* 24px */
+    --spacing-xl: 2rem;              /* 32px */
+    --spacing-2xl: 3rem;             /* 48px */
+    --spacing-3xl: 4rem;             /* 64px */
+    --spacing-4xl: 5rem;             /* 80px */
+    
+    /* BORDER RADIUS */
+    --radius-sm: 8px;                /* Small elements */
+    --radius-md: 10px;               /* Buttons */
+    --radius-lg: 15px;               /* Cards */
+    --radius-xl: 20px;               /* Large cards */
+    --radius-2xl: 30px;              /* Hero image container */
+    --radius-full: 50%;              /* Circular elements */
+    
+    /* SHADOWS */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(236, 72, 153, 0.3);
+    --shadow-lg: 0 8px 20px rgba(236, 72, 153, 0.4);
+    --shadow-xl: 0 10px 40px rgba(0, 0, 0, 0.15);
+    --shadow-2xl: 0 20px 60px rgba(0, 0, 0, 0.15);
+    
+    /* TRANSITIONS */
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.8s ease-in-out;
+    
+    /* BREAKPOINTS */
+    --breakpoint-mobile: 768px;
+    --breakpoint-tablet: 1024px;
+    --breakpoint-desktop: 1400px;
+  }
+  
+  /* ============================================
+     USAGE EXAMPLES
+     ============================================
+  
+     Button:
+     background-color: var(--color-primary);
+     padding: var(--spacing-md) var(--spacing-xl);
+     border-radius: var(--radius-md);
+     box-shadow: var(--shadow-lg);
+     
+     Heading:
+     font-size: var(--font-size-h1);
+     font-weight: var(--font-weight-bold);
+     color: var(--color-dark);
+     line-height: var(--line-height-tight);
+     
+     Card:
+     background: var(--color-bg-white);
+     border-radius: var(--radius-xl);
+     box-shadow: var(--shadow-xl);
+     padding: var(--spacing-lg);
+  
+  ============================================ */
+  
+  /* COMPONENT-SPECIFIC NOTES */
+  
+  /* 
+    NAVBAR:
+    - Height: Auto with 1rem padding
+    - Background: Pure white with subtle shadow
+    - Logo size: 1.5rem
+    - Menu gap: 2.5rem
+    
+    HERO SECTION:
+    - Min height: calc(100vh - 80px)
+    - Grid columns: 1fr 1fr (desktop)
+    - Grid gap: 4rem
+    - Image container: 550px x 650px max
+    
+    BUTTONS:
+    - Primary: Pink background (#ec4899)
+    - Secondary: Dark navy (#1e293b)
+    - Padding: 1rem 2rem
+    - Hover: translateY(-2px) + shadow
+    
+    SLIDER:
+    - Transition: 0.8s ease-in-out
+    - Auto-play interval: 2000ms (2 seconds)
+    - Indicator: Active width 30px, inactive 10px
+    
+    FLOATING CARDS:
+    - Float animation: 3s infinite
+    - Z-index: 10
+    - Border radius: 20px
+    - Minimum width: 280px
+  */

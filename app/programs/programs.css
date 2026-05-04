@@ -1,0 +1,416 @@
+/* ═══════════════════════════════════════════
+   Programmes.css
+   Alternating flyer-left / flyer-right layout
+   ═══════════════════════════════════════════ */
+
+/* ── Page shell ──────────────────────────── */
+.programmes-page {
+    background: #ffffff;
+    min-height: 100vh;
+  }
+  
+  /* ── Hero ────────────────────────────────── */
+  .programmes-hero {
+    background: #0a0a14;
+    padding: 70px 24px 70px;
+    text-align: center;
+  }
+  
+  .programmes-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    color: var(--blue);
+    text-transform: uppercase;
+    margin: 0 0 18px;
+  }
+  
+  .programmes-hero-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 20px;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+  
+  .programmes-hero-highlight {
+    color: var(--blue)
+  }
+  
+  .programmes-hero-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.75;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  
+  /* ── Programme list ──────────────────────── */
+  .programmes-list {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 80px 24px 120px;
+  }
+  
+  .prog-entry {
+    margin-bottom: 0;
+  }
+  
+  .prog-divider {
+    height: 1px;
+    background: #ebebf5;
+    margin: 80px 0;
+  }
+  
+  /* ── Row layout ──────────────────────────── */
+  .prog-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+  }
+  
+  /* Flyer right = reverse column order */
+  .prog-row--reverse {
+    direction: rtl;
+  }
+  
+  .prog-row--reverse > * {
+    direction: ltr;
+  }
+  
+  /* ── Flyer block ─────────────────────────── */
+  .prog-flyer {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 36px 32px 32px;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Grid line texture */
+  .prog-flyer-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 36px 36px;
+    pointer-events: none;
+  }
+  
+  /* Top row */
+  .prog-flyer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .prog-flyer-badge {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 5px 12px;
+    border-radius: 20px;
+  }
+  .prog-writeup-dot{
+    background: var(--blue);
+  }
+  .prog-flyer-logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.25);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  
+  /* Centre */
+  .prog-flyer-centre {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .prog-flyer-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(20px, 2.4vw, 28px);
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 20px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+  
+  .prog-flyer-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .prog-flyer-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Bottom price */
+  .prog-flyer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .prog-flyer-price-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  .prog-flyer-price {
+    font-family: 'Syne', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  
+  /* Watermark */
+  .prog-flyer-watermark {
+    position: absolute;
+    bottom: -16px;
+    right: 16px;
+    font-family: 'Syne', sans-serif;
+    font-size: 120px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.03);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  /* ── Writeup block ───────────────────────── */
+  .prog-writeup {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .prog-writeup-badge {
+    display: inline-flex;
+    align-self: flex-start;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+  }
+  
+  .prog-writeup-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(24px, 2.8vw, 36px);
+    font-weight: 800;
+    color: #0a0a14;
+    margin: 0 0 20px;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  
+  /* Info pills row */
+  .prog-writeup-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  
+  .prog-writeup-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #5a5a6e;
+    background: #f3f3f8;
+    border: 1px solid #e8e8f0;
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+  
+  .prog-writeup-pill--price {
+    font-weight: 700;
+  }
+  
+  /* Overview */
+  .prog-writeup-overview {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: #5a5a6e;
+    line-height: 1.8;
+    margin: 0 0 28px;
+  }
+  
+  /* Sections */
+  .prog-writeup-section {
+    margin-bottom: 24px;
+  }
+  
+  .prog-writeup-section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0a0a14;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 14px;
+  }
+  
+  /* Learn list */
+  .prog-writeup-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .prog-writeup-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14.5px;
+    color: #3a3a4a;
+    line-height: 1.5;
+  }
+  
+  .prog-writeup-dot {
+    flex-shrink: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-top: 6px;
+  }
+  
+  /* Who is this for */
+  .prog-writeup-who {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14.5px;
+    color: #5a5a6e;
+    line-height: 1.75;
+    margin: 0;
+    padding: 16px 18px;
+    background: #f8f8fc;
+    border-left: 3px solid #e8e8f0;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  /* Apply button */
+  .prog-apply-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 32px;
+    color: #fff;
+    background: var(--blue);
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    margin-top: 8px;
+    align-self: flex-start;
+    transition: filter 0.2s, transform 0.2s;
+  }
+  
+  .prog-apply-btn:hover {
+    filter: brightness(1.12);
+    transform: translateY(-2px);
+  }
+  
+  /* ── Responsive ──────────────────────────── */
+  @media (max-width: 900px) {
+    .prog-row,
+    .prog-row--reverse {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      direction: ltr;
+    }
+  
+    .prog-row--reverse > * {
+      direction: ltr;
+    }
+  
+    .prog-flyer {
+      min-height: 300px;
+    }
+  
+    .prog-divider {
+      margin: 60px 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .programmes-hero {
+      padding: 72px 20px 64px;
+    }
+    .programmes-hero-title {
+        font-size: clamp(33px, 5vw, 50px);
+    }
+    .programmes-list {
+      padding: 56px 20px 80px;
+    }
+  
+    .prog-flyer {
+      padding: 28px 24px 26px;
+      min-height: 260px;
+    }
+  
+    .prog-apply-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
+  /* ── Real flyer image variant ────────────── */
+  .prog-flyer--image {
+    background: none !important;
+    padding: 0;
+    min-height: unset;
+    border: none;
+  }
+  
+  .prog-flyer-img {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    border-radius: 20px;
+  }

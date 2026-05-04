@@ -1,0 +1,207 @@
+"use client";
+
+import "./programs.css";
+
+const programmes = [
+  {
+    id: 1,
+    badge: "Beginner Friendly",
+    title: "Skills Bootcamp",
+    duration: "12 Weeks",
+    mode: "Online & In-Person",
+    price: "₦150,000",
+    applyUrl: "https://forms.gle/pLzNaCycknxxzpzU7",
+    // ✅ Drop flyer image
+    flyerImage: "/program.jpg",
+    gradient: "linear-gradient(135deg,rgb(10, 14, 26) 0%,rgb(10, 30, 61) 60%,rgba(30, 49, 224, 0.2) 100%)",
+    accentColor: "#e01e6e",
+    overview: `Our mission is centered on impacting knowledge and shaping young minds by equipping them with practical, future-ready tech skills. Through hands-on learning and real-world exposure, we empower learners to grow from beginners into confident problem-solvers.`,
+    whatYouLearn: [
+      "AI & Machine Learning",
+      " Mobile App Developmen",
+      "Product Design",
+      "Graphisc Design",
+    ],
+    whoFor:
+      "This programme is ideal for tutors, impacting knowledge and raising young minds in gaining tech skills"
+  },
+
+];
+
+type Programme = (typeof programmes)[0];
+
+function FlyerBlock({ programme }: { programme: Programme }) {
+  /* ── Real flyer image ── */
+  if (programme.flyerImage) {
+    return (
+      <div className="prog-flyer prog-flyer--image">
+        <img
+          src={programme.flyerImage}
+          alt={`${programme.title} flyer`}
+          className="prog-flyer-img"
+        />
+      </div>
+    );
+  }
+
+  /* ── Fallback generated flyer (shown until you add a real image) ── */
+  return (
+    <div className="prog-flyer" style={{ background: programme.gradient }}>
+      <div className="prog-flyer-grid" aria-hidden="true" />
+
+      <div className="prog-flyer-top">
+        <span
+          className="prog-flyer-badge"
+          style={{
+            background: `${programme.accentColor}22`,
+            color: programme.accentColor,
+            border: `1px solid ${programme.accentColor}44`,
+          }}
+        >
+          {programme.badge}
+        </span>
+        <span className="prog-flyer-logo">TechCo</span>
+      </div>
+
+      <div className="prog-flyer-centre">
+        <h3 className="prog-flyer-title">{programme.title}</h3>
+        <div className="prog-flyer-meta">
+          <span className="prog-flyer-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" />
+            </svg>
+            {programme.duration}
+          </span>
+          <span className="prog-flyer-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" /><path d="M8 21h8M12 17v4" />
+            </svg>
+            {programme.mode}
+          </span>
+        </div>
+      </div>
+
+      <div className="prog-flyer-bottom">
+        <span className="prog-flyer-price-label">Programme fee</span>
+        <span className="prog-flyer-price" style={{ color: programme.accentColor }}>
+          {programme.price}
+        </span>
+      </div>
+
+      <span className="prog-flyer-watermark">0{programme.id}</span>
+    </div>
+  );
+}
+
+function WriteupBlock({ programme }: { programme: Programme }) {
+  return (
+    <div className="prog-writeup">
+      {/* <span
+        className="prog-writeup-badge"
+        style={{
+          background: "#2196f3",
+          color: "#fff",
+          border: `1px solid ${programme.accentColor}33`,
+        }}
+      >
+        {programme.badge}
+      </span> */}
+
+      <h2 className="prog-writeup-title">{programme.title}</h2>
+
+      <div className="prog-writeup-pills">
+        <span className="prog-writeup-pill">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" />
+          </svg>
+          {programme.duration}
+        </span>
+        <span className="prog-writeup-pill">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <rect x="2" y="3" width="20" height="14" rx="2" /><path d="M8 21h8M12 17v4" />
+          </svg>
+          {programme.mode}
+        </span>
+        {/* <span
+          className="prog-writeup-pill prog-writeup-pill--price"
+          style={{
+            color: programme.accentColor,
+            borderColor: `${programme.accentColor}44`,
+            background: `${programme.accentColor}10`,
+          }}
+        >
+          {programme.price}
+        </span> */}
+      </div>
+
+      <p className="prog-writeup-overview">{programme.overview}</p>
+
+      <div className="prog-writeup-section">
+        <h4 className="prog-writeup-section-title">Proficient In</h4>
+        <ul className="prog-writeup-list">
+          {programme.whatYouLearn.map((item, i) => (
+            <li key={i} className="prog-writeup-list-item">
+              <span className="prog-writeup-dot" />
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="prog-writeup-section">
+        <h4 className="prog-writeup-section-title">Who is this for?</h4>
+        <p className="prog-writeup-who">{programme.whoFor}</p>
+      </div>
+
+      <a
+        href={programme.applyUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="prog-apply-btn"
+       
+      >
+        Apply for this programme
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </a>
+    </div>
+  );
+}
+
+export default function Programmes() {
+  return (
+    <main className="programmes-page">
+
+      <div className="programmes-hero">
+        <p className="programmes-eyebrow">LEARN WITH US</p>
+        <h1 className="programmes-hero-title">
+          Our <span className="programmes-hero-highlight">Training</span> Programmes
+        </h1>
+        <p className="programmes-hero-sub">
+          Practical, industry-led programmes designed to build real skills and
+          launch careers in technology. All cohorts are kept small so every
+          student gets the attention they deserve.
+        </p>
+      </div>
+
+      <div className="programmes-list">
+        {programmes.map((p, i) => {
+          const flyerFirst = i % 2 === 0;
+          return (
+            <div key={p.id} className="prog-entry">
+              <div className={`prog-row ${flyerFirst ? "" : "prog-row--reverse"}`}>
+                <FlyerBlock programme={p} />
+                <WriteupBlock programme={p} />
+              </div>
+              {i < programmes.length - 1 && (
+                <div className="prog-divider" aria-hidden="true" />
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+    </main>
+  );
+}

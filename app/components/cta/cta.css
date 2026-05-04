@@ -1,0 +1,114 @@
+/* SECTION */
+.cta-section {
+    background: #0a0a14;
+    padding: 120px 2px;
+  }
+  
+  /* CONTAINER */
+  .cta-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  /* BOX */
+  .cta-box {
+    position: relative;
+    background: linear-gradient(135deg, #111122, #0f0f1a);
+    border-radius: 20px;
+    padding: 60px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+  
+  /* GLOW EFFECT */
+  .cta-glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(30, 82, 224, 0.25), transparent 70%);
+    top: -100px;
+    right: -100px;
+    filter: blur(60px);
+  }
+  
+  /* CONTENT */
+  .cta-content {
+    position: relative;
+    max-width: 600px;
+    z-index: 2;
+  }
+  
+  /* TEXT */
+  .cta-eyebrow {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--blue);
+    margin-bottom: 16px;
+  }
+  
+  .cta-heading {
+    font-size: 42px;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  
+  .cta-heading span {
+    color: var(--blue);
+  }
+  
+  .cta-subtext {
+    color: #aaa;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  /* BUTTONS */
+  .cta-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  
+  .cta-btn {
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.25s ease;
+  }
+  
+  /* PRIMARY */
+  .cta-btn.primary {
+    background: var(--blue);
+    color: #fff;
+    box-shadow: 0 8px 25px rgba(30, 59, 224, 0.35);
+  }
+  
+  .cta-btn.primary:hover {
+    background: var(--dpblue);
+    transform: translateY(-2px);
+  }
+  
+  /* SECONDARY */
+  .cta-btn.secondary {
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+  }
+  
+  .cta-btn.secondary:hover {
+    background: rgba(255,255,255,0.05);
+  }
+  
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .cta-box {
+      padding: 40px 16px;
+    }
+  
+    .cta-heading {
+      font-size: 30px;
+    }
+  }

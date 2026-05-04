@@ -1,0 +1,129 @@
+/* SECTION */
+.services-section {
+  background: #f5f5fa;
+  padding: 100px 0;
+}
+
+/* LAYOUT */
+.services-container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* LEFT SIDE */
+.services-eyebrow {
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: var(--blue);;
+  margin-bottom: 16px;
+}
+
+.services-heading {
+  font-size: 38px;
+  color: #0a0a14;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.services-highlight {
+  background: var(--dpblue);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.services-body {
+  font-size: 18px;
+  color: #5a5a6e;
+  margin-bottom: 28px;
+}
+
+.services-cta {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.services-cta:hover {
+  background: var(--dpblue);
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* gap: 20px; */
+}
+
+/* CARD */
+.services-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  transition: all 0.25s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+  margin-top: -.5rem;
+}
+
+.services-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* CARD CONTENT */
+.services-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.services-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0a0a14;
+}
+
+.services-card-sub {
+  font-size: 16px;
+  color: #777;
+}
+
+/* ICON DOT */
+.services-card-icon {
+  width: 10px;
+  height: 10px;
+  background: var(--blue);
+  border-radius: 50%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 920px) {
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+
+  .services-body {
+    font-size: 16px;
+  }
+.services-card-sub {
+  font-size: 14px;
+}
+}

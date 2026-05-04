@@ -1,0 +1,180 @@
+
+.alt-section {
+    background: #ffffff;
+    padding: 80px 0 100px;
+  }
+  
+  /* ── Layout ──────────────────────────────── */
+  .alt-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  
+  /* ── Left: image ─────────────────────────── */
+  .alt-image-col {
+    position: relative;
+  }
+  
+  .alt-image-wrap {
+    position: relative;
+  }
+  
+  /* The thin left-side vertical accent bar from the design */
+  .alt-image-accent {
+    position: absolute;
+    top: 0;
+    left: -6px;
+    width: 4px;
+    height: 100%;
+    background: var(--blue);
+    border-radius: 4px;
+  }
+  
+  .alt-image-inner {
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 4 / 4.2;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  }
+  
+  .alt-img-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    opacity: 0.55;
+    letter-spacing: 0.03em;
+  }
+  
+  .alt-img-placeholder p {
+    margin: 0;
+  }
+  
+  /* ── Right: content ──────────────────────── */
+  .alt-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  /* Heading — matches the bold weight from the screenshot */
+  .alt-heading {
+    font-family: 'Syne', sans-serif;
+    /* font-size: clamp(28px, 3.2vw, 42px); */
+    font-size:2.5rem ;
+    font-weight: 700;
+    color: #0a0a14;
+    line-height: 1.15;
+    margin: 0 0 24px;
+    letter-spacing: -0.02em;
+  }
+  
+  /* Pink boxed/pill highlight — exactly like the screenshot */
+  .alt-highlight {
+    display: inline-block;
+    background: var(--blue);
+    color: #ffffff;
+    padding: 2px 10px 4px;
+    border-radius: 6px;
+    font-style: normal;
+    line-height: 1.2;
+  }
+  
+  /* Body paragraph */
+  .alt-body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: #5a5a6e;
+    line-height: 1.75;
+    margin: 0 0 36px;
+  }
+  
+  /* ── Step indicator ──────────────────────── */
+  /* Matches the "Create Invoice — Send Invoice — Receive payment"
+     dot-line-dot-line-dot row in the design */
+  
+  .alt-steps {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+  
+  .alt-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  
+  .alt-step-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d0d0de;
+    border: 2px solid #d0d0de;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  
+  .alt-step-dot--active {
+    background: var(--dpblue);
+    border-color: var(--dpblue);
+  }
+  
+  .alt-step-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: #6b6b80;
+    white-space: nowrap;
+    letter-spacing: 0.01em;
+  }
+  
+  /* The line connecting dots */
+  .alt-step-line {
+    flex: 1;
+    height: 1.5px;
+    background: #d0d0de;
+    margin-bottom: 22px; /* aligns with dot centre, offset by label height */
+    min-width: 48px;
+  }
+  
+  /* ── Responsive ──────────────────────────── */
+  @media (max-width: 860px) {
+    .alt-container {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .alt-section {
+      padding: 56px 0 72px;
+    }
+    .alt-container{
+      display: flex;
+    flex-direction: column-reverse;
+    }
+
+    .alt-heading {
+      font-size: 26px;
+    }
+  
+    .alt-step-line {
+      min-width: 24px;
+    }
+  
+    .alt-step-label {
+      font-size: 11px;
+    }
+  }
