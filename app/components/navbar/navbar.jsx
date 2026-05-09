@@ -21,7 +21,7 @@ export default function Navbar() {
         <div className="navbar-logo">
           <Link href="/" onClick={closeMenu} className='flex'>
           <img src="/logo.png" alt="" />
-          <h2 className='logo-text'>Omega Digital <br /> Tech Inovations</h2>
+          <h2 className='logo-text'>Omega Digital <br /> Technology Innovations</h2>
           </Link>
         </div>
 

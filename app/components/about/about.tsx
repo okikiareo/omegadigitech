@@ -23,10 +23,9 @@ export default function About() {
           </h2>
 
           <p className="alt-body">
-            We are a technology company built on the belief that great software
-            changes businesses. We provide IT services, digital solutions, and
-            strategic consultancy — giving you the ability to move fast, scale
-            smart, and stay ahead.
+          We are a technology company built on the belief that great software changes businesses. 
+          <br /> Led by the President, Omega Digital Tech Innovations, we provide IT services, digital solutions, 
+          and strategic consultancy giving you the ability to move fast, scale smart, and stay ahead.
           </p>
 
           {/* Step indicator — matches the design exactly */}

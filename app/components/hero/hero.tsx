@@ -48,8 +48,8 @@ export default function Hero() {
           </p>
 
           <div className="hero-buttons">
-            <button className="btn-get-started">Get Started</button>
-            <button className="btn-learn-more">Learn More</button>
+            <a href="#cta" className="btn-get-started">Get Started</a>
+            <a href="/programs" className="btn-learn-more">Explore </a>
           </div>
 
           <div className="hero-badge">

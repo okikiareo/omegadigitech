@@ -67,7 +67,6 @@
     flex-direction: column;
     gap: 0;
   }
-  
   /* Heading — matches the bold weight from the screenshot */
   .alt-heading {
     font-family: 'Syne', sans-serif;
@@ -93,8 +92,7 @@
   
   /* Body paragraph */
   .alt-body {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     color: #5a5a6e;
     line-height: 1.75;
     margin: 0 0 36px;
@@ -169,7 +167,9 @@
     .alt-heading {
       font-size: 26px;
     }
-  
+    .alt-body {
+      font-size: 15px;
+    }
     .alt-step-line {
       min-width: 24px;
     }

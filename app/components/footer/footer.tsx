@@ -12,7 +12,7 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="footer-brand">
-            <h3 className="footer-logo">Omega Digital Tech Innovations</h3>
+            <h3 className="footer-logo">Omega Digital Technology Innovations</h3>
             <p className="footer-tagline">
               Powering businesses and startups building modern digital experiences, scalable systems, and reliable tech solutions.
             </p>
@@ -46,7 +46,7 @@ export default function Footer() {
               <ul>
                 <li>Lagos, Nigeria</li>
                 <li>+2348130240604</li>
-                <li>omegadigitaltechnologies.com</li>
+                <li>omegadigitaltechnologies@gmail.com</li>
               </ul>
             </div>
 

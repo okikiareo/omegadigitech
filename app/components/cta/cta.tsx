@@ -4,7 +4,7 @@ import "./cta.css";
 
 export default function CTA() {
   return (
-    <section className="cta-section">
+    <section className="cta-section" id="cta">
       <div className="cta-container">
 
         <div className="cta-box">
@@ -25,7 +25,7 @@ export default function CTA() {
 
             {/* Buttons */}
             <div className="cta-actions">
-              <a href="/contact" className="cta-btn primary">
+              <a href="https://wa.me/2348130240604" target="blank" className="cta-btn primary">
                 Start a Project →
               </a>
 

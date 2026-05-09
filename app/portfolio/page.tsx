@@ -18,24 +18,42 @@ const projects = [
   },
   {
     id: 3,
+    title: "Hobbly Website",
+    category: "Design",
+    image: "/design1.jpg",
+  },
+  {
+    id: 4,
+    title: "Crypto Currency",
+    category: "Design",
+    image: "/design.jpg",
+  },
+  {
+    id: 5,
+    title: "Travel & Tourism",
+    category: "Design",
+    image: "/design2.jpg",
+  },
+  {
+    id: 6,
     title: "Mobile Banking App",
     category: "App",
     image: "/project7.jpg",
   },
   {
-    id: 4,
+    id: 7,
     title: "E-commerce UI System",
-    category: "Design",
+    category: "Web",
     image: "/project2.png",
   },
   {
-    id: 5,
+    id: 8,
     title: "Crypto Dashboard",
     category: "Web",
     image: "/project8.jpg",
   },
   {
-    id: 6,
+    id: 9,
     title: "Sales Data Insights",
     category: "Data",
     image: "/project9.jpg",
@@ -48,14 +66,11 @@ export default function PortfolioPage() {
   const [active, setActive] = useState("All");
 
   const filteredProjects =
-    active === "All"
-      ? projects
-      : projects.filter((p) => p.category === active);
+    active === "All" ? projects : projects.filter((p) => p.category === active);
 
   return (
     <section className="portfolio-page">
       <div className="portfolio-container">
-
         {/* HEADER */}
         <div className="portfolio-header">
           <h1>Our Work</h1>
@@ -82,7 +97,6 @@ export default function PortfolioPage() {
         <div className="portfolio-grid">
           {filteredProjects.map((p) => (
             <div key={p.id} className="portfolio-card">
-
               <div className="portfolio-image">
                 <img src={p.image} alt={p.title} />
               </div>
@@ -91,11 +105,9 @@ export default function PortfolioPage() {
                 <h3>{p.title}</h3>
                 <span>{p.category}</span>
               </div>
-
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

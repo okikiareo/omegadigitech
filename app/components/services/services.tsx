@@ -46,7 +46,7 @@ export default function Services() {
             We design, build, and scale digital products from infrastructure to user experience.
           </p>
 
-          <a href="#contact" className="services-cta">
+          <a href="https://wa.me/2348130240604" target="blank" className="services-cta">
             Get Started →
           </a>
         </div>
