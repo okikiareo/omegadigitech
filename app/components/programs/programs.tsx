@@ -9,7 +9,7 @@ export default function ProgramHighlight() {
 
         {/* LEFT CONTENT */}
         <div className="program-content">
-          <p className="program-eyebrow">UPCOMING PROGRAM</p>
+          <p className="program-eyebrow">OMEGA DIGITAL LITERACY INITIATIVE</p>
 
           <h2 className="program-heading">
             Become a Programme Instructor
@@ -18,14 +18,13 @@ export default function ProgramHighlight() {
           </h2>
 
           <p className="program-desc">
-            Are you passionate about impacting knowledge and raising young minds 
-            in gaining tech skills? <br />
-            Omega Digital is currently recruiting skilled and dedicated instructors 
-            for our digital skills bootcamp.
-          </p>
+  Omega Digital Literacy Initiative equips secondary school students with practical digital skills for today’s evolving world.
+  <br />
+  Through a hands-on 3-day bootcamp in partner schools, students gain experience with modern technology and digital tools.
+</p>
 
           <ul className="program-list">
-            <li>✔ AI & Machine Learning</li>
+            <li>✔ Machine Learning & Artificial Intelligence</li>
             <li>✔ Mobile App Development</li>
             <li>✔ Product Design</li>
             <li>✔ Graphic Design</li>
