@@ -6,14 +6,15 @@ import "./portfolio.css";
 const projects = [
   {
     id: 1,
-    tag: "Web Development",
-    title: "FinTrack Dashboard",
-    desc: "A real-time financial analytics platform built for a Lagos-based fintech startup.",
+    tag: "App Development",
+    title: "Binx AI Chat",
+    desc: "Binx AI is a groundbreaking WhatsApp chatbot developed  to elevate your daily communication experience.",
     year: "2024",
-    stack: ["Next.js", "Node.js", "PostgreSQL"],
+    stack: ["React Native", "Node.js", "PostgreSQL"],
     color: "#e01e6e",
     number: "01",
-    image: "/project.jpg",
+    image: "/app7.jpg",
+    url: "https://usebinx.com",
   },
   {
     id: 2,
@@ -24,18 +25,18 @@ const projects = [
     stack: ["AWS", "Terraform", "Docker"],
     color: "#3b6fd4",
     number: "02",
-    image: "/project8.jpg",
+    image: "/project.jpg",
   },
   {
     id: 3,
     tag: "Digital & Branding",
-    title: "ShopNaija E-commerce",
-    desc: "E-commerce redesign with mobile-first storefront and CMS.",
+    title: "Hobbly For Kids",
+    desc: "Kids center for exploring hobbies & learn different skills.",
     year: "2023",
     stack: ["React", "Sanity", "Stripe"],
     color: "#f59e0b",
     number: "03",
-    image: "/project2.png",
+    image: "/design1.jpg",
   },
 ];
 
@@ -65,7 +66,7 @@ export default function Portfolio() {
         <div className="port-list">
           {projects.map((p) => (
             <a
-              href={`/portfolio/${p.id}`}
+            href={p.url}
               key={p.id}
               className="port-item"
               onMouseEnter={() => setHovered(p.id)}

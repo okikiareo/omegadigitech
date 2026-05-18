@@ -37,7 +37,7 @@ const projects = [
   {
     id: 6,
     title: "Mobile Banking App",
-    category: "App",
+    category: "Web",
     image: "/project7.jpg",
   },
   {
@@ -58,6 +58,41 @@ const projects = [
     category: "Data",
     image: "/project9.jpg",
   },
+  {
+    id: 10,
+    title: "Binx AI Chat",
+    category: "App",
+    image: "/app7.jpg",
+  },
+    {
+    id: 11,
+    title: "Rent A car",
+    category: "App",
+    image: "/app.jpg",
+  },  {
+    id: 12,
+    title: "Wiki ride Hailing-App",
+    category: "App",
+    image: "/app1.jpg",
+  },
+  {
+    id: 13,
+    title: "Rydes By Mom  ",
+    category: "App",
+    image: "/app2.jpg",
+  },
+  {
+    id: 14,
+    title: "Rent A Property",
+    category: "App",
+    image: "/app3.jpg",
+  },
+  {
+    id: 15,
+    title: "Mediic AI",
+    category: "App",
+    image: "/app5.jpg",
+  },
 ];
 
 const filters = ["All", "Web", "App", "Design", "Data"];
@@ -75,8 +110,7 @@ export default function PortfolioPage() {
         <div className="portfolio-header">
           <h1>Our Work</h1>
           <p>
-            A selection of projects across design, development, and data —
-            crafted to solve real-world problems.
+            A selection of projects across design, development, and data           crafted to solve real-world problems.
           </p>
         </div>
 

@@ -5,64 +5,64 @@ export default function Testimonials() {
   const testimonialsRow1 = [
     {
       id: 1,
-      name: 'Tunde Olatunji',
-      role: 'CEO, TechStart',
-      avatar: 'https://i.pravatar.cc/150?img=12',
-      text: 'Managing payments has always been a hassle until I came across TechSolutions. The dashboard is user-friendly, and I find it easy to track all my payments now.'
+      name: 'David Mensah',
+      role: 'Entreprenuer',
+      avatar: '/testimonial.jpg',
+      text: 'The Innovation Lab gave me my first real exposure to building digital products. I came in curious and left with practical skills, confidence, and a clearer career direction.'
     },
     {
       id: 2,
-      name: 'Bola Adegoke',
-      role: 'Founder, RetailHub',
-      avatar: 'https://i.pravatar.cc/150?img=45',
-      text: 'TechSolutions has simplified my business process tremendously. Clients appreciate the easy payment options, and I love the quick access to funds. It\'s been a fantastic experience!'
+      name: 'Precious Adeyemi',
+      role: 'Student, Digital Literacy Initiative',
+      avatar: '/testimonial-1.jpg',
+      text: 'I honestly didn’t know much about technology before joining the programme. The sessions were practical, engaging, and easy to follow. Now I feel more confident using digital tools.'
     },
     {
       id: 3,
-      name: 'Chigozie Nwankwo',
-      role: 'Director, AgriTech',
-      avatar: 'https://i.pravatar.cc/150?img=33',
-      text: 'I was struggling with managing our IT infrastructure until I found TechSolutions. Their cloud solutions offer gave me peace of mind and helped us focus on growing my online business.'
+      name: 'Michael Johnson',
+      role: 'Participant, Founders Academy',
+      avatar: '/testimonial-4.jpg',
+      text: 'What stood out for me was how practical everything was. We didn’t just learn ideas, we worked on real solutions and got guidance from people already in the industry.'
     },
     {
       id: 4,
-      name: 'Amara Okafor',
-      role: 'CTO, FinanceHub',
-      avatar: 'https://i.pravatar.cc/150?img=28',
-      text: 'The transactions are smoother than I expected. Our team has been helpful to add all features we needed. We also share payment links to our clients seamlessly.'
+      name: 'Chioma Eze',
+      role: 'Creative Entrepreneur',
+      avatar: '/testimonial-3.jpg',
+      text: 'The programme helped me see how technology can support and grow my business. I met amazing people, learned valuable skills, and gained the motivation to keep building.'
     }
   ];
 
-  const testimonialsRow2 = [
-    {
-      id: 5,
-      name: 'Damilola Johnson',
-      role: 'Product Manager, StartupCo',
-      avatar: 'https://i.pravatar.cc/150?img=47',
-      text: 'Integrating TechSolutions API into our app was a breeze. The API is intuitive, and their support team guided us every step of the way. Our users love the speed and security, making it a win-win for us!'
-    },
-    {
-      id: 6,
-      name: 'Kelechi Nnaji',
-      role: 'Owner, BoutiqueShop',
-      avatar: 'https://i.pravatar.cc/150?img=58',
-      text: 'Switching to TechSolutions has been a game-changer for my boutique. The integration was seamless, and my customers love the fast, secure checkout. I\'ve seen a noticeable increase in sales!'
-    },
-    {
-      id: 7,
-      name: 'Chinonso Uche',
-      role: 'Operations Lead, LogiTech',
-      avatar: 'https://i.pravatar.cc/150?img=69',
-      text: 'TechSolutions has elevated our business operations with its innovative features. Flexibility and reliability have significantly enhanced our service offerings, allowing us to better serve our clients!'
-    },
-    {
-      id: 8,
-      name: 'Ngozi Mbah',
-      role: 'Entrepreneur, EduTech',
-      avatar: 'https://i.pravatar.cc/150?img=25',
-      text: 'The level of professionalism and technical expertise is outstanding. They delivered our project on time and exceeded our expectations. Highly recommend their services!'
-    }
-  ];
+  // const testimonialsRow2 = [
+  //   {
+  //     id: 5,
+  //     name: 'Damilola Johnson',
+  //     role: 'Product Manager, StartupCo',
+  //     avatar: 'https://i.pravatar.cc/150?img=47',
+  //     text: 'Integrating TechSolutions API into our app was a breeze. The API is intuitive, and their support team guided us every step of the way. Our users love the speed and security, making it a win-win for us!'
+  //   },
+  //   {
+  //     id: 6,
+  //     name: 'Kelechi Nnaji',
+  //     role: 'Owner, BoutiqueShop',
+  //     avatar: 'https://i.pravatar.cc/150?img=58',
+  //     text: 'Switching to TechSolutions has been a game-changer for my boutique. The integration was seamless, and my customers love the fast, secure checkout. I\'ve seen a noticeable increase in sales!'
+  //   },
+  //   {
+  //     id: 7,
+  //     name: 'Chinonso Uche',
+  //     role: 'Operations Lead, LogiTech',
+  //     avatar: 'https://i.pravatar.cc/150?img=69',
+  //     text: 'TechSolutions has elevated our business operations with its innovative features. Flexibility and reliability have significantly enhanced our service offerings, allowing us to better serve our clients!'
+  //   },
+  //   {
+  //     id: 8,
+  //     name: 'Ngozi Mbah',
+  //     role: 'Entrepreneur, EduTech',
+  //     avatar: 'https://i.pravatar.cc/150?img=25',
+  //     text: 'The level of professionalism and technical expertise is outstanding. They delivered our project on time and exceeded our expectations. Highly recommend their services!'
+  //   }
+  // ];
 
   return (
     <section className="testimonials-section">
@@ -121,9 +121,9 @@ export default function Testimonials() {
           </div>
 
           {/* Row 2 - Scroll Right to Left */}
-          <div className="testimonials-row">
+          {/* <div className="testimonials-row">
             <div className="testimonials-track scroll-right">
-              {/* Original cards */}
+              
               {testimonialsRow2.map((testimonial) => (
                 <div key={testimonial.id} className="testimonial-card">
                   <div className="testimonial-header">
@@ -140,7 +140,7 @@ export default function Testimonials() {
                   <p className="testimonial-text">"{testimonial.text}"</p>
                 </div>
               ))}
-              {/* Duplicate cards for seamless loop */}
+              
               {testimonialsRow2.map((testimonial) => (
                 <div key={`${testimonial.id}-duplicate`} className="testimonial-card">
                   <div className="testimonial-header">
@@ -158,7 +158,7 @@ export default function Testimonials() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

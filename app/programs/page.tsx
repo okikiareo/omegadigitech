@@ -10,6 +10,7 @@ const programmes = [
     duration: "3 Days Intensive Training",
     mode: "On-Site School Training",
     // price: "₦150,000",
+    showApplyButton: true,
     applyUrl: "https://forms.gle/pLzNaCycknxxzpzU7",
     // ✅ Drop flyer image
     flyerImage: "/program.jpg",
@@ -26,6 +27,59 @@ const programmes = [
     whoFor:
       "This programme is designed for secondary school students who want to gain practical digital skills, improve career readiness, and explore opportunities in technology.",
       extraInfo: `The bootcamp is delivered through interactive facilitator-led sessions within partner schools, creating an engaging learning experience while helping schools position themselves as innovation-driven institutions.`,
+    },
+    {
+      id: 2,
+      badge: "Founders Academy",
+      title: "Omega Founders Academy",
+      duration: "Structured Founder Development Programme",
+      mode: "Mentorship & Practical Training",
+      showApplyButton: false,
+      // applyUrl: "https://forms.gle/pLzNaCycknxxzpzU7",
+      // flyerImage: "/founders-academy.jpg",
+      gradient:
+        "linear-gradient(135deg,rgb(18, 18, 18) 0%,rgb(28, 35, 52) 60%,rgba(59, 130, 246, 0.2) 100%)",
+      accentColor: "#3b82f6",
+    
+      overview: `Omega Founders Academy is a structured learning and support programme designed for aspiring entrepreneurs, early-stage founders, and young professionals looking to build sustainable businesses and innovation-driven ventures. The programme combines practical training, mentorship, and community support to help participants move from ideas to execution.`,
+      whatYouLearn: [
+        "Business Development & Strategy",
+        "Startup Execution",
+        "Entrepreneurship & Innovation",
+        "Growth & Leadership Skills",
+      ],
+    
+      whoFor:
+        "This programme is designed for recent graduates, early-stage startup founders, and young professionals seeking practical entrepreneurial pathways and business growth opportunities.",
+    
+      extraInfo: `Participants gain access to experienced mentors, execution-focused learning sessions, and a community of innovators that supports collaboration, growth, and long-term business development.`,
+    },
+    {
+      id: 3,
+      badge: "Innovation Labs",
+      title: "Omega Innovation Labs",
+      duration: "Startup Incubation & Venture Support",
+      mode: "Idea Validation & Product Development",
+      showApplyButton: false,
+      // applyUrl: "https://forms.gle/pLzNaCycknxxzpzU7",
+      // flyerImage: "/innovation-lab.jpg",
+      gradient:
+        "linear-gradient(135deg,rgb(8, 12, 20) 0%,rgb(22, 58, 45) 60%,rgba(16, 185, 129, 0.2) 100%)",
+      accentColor: "#10b981",
+    
+      overview: `Omega Innovation Labs is the incubation arm of Omega, focused on helping innovators and founders transform raw ideas into scalable, structured, and impactful businesses. Through mentorship, product support, and business development guidance, participants receive the clarity and execution support needed to grow sustainable ventures.`,
+    
+      whatYouLearn: [
+        "Idea Validation & Refinement",
+        "Business Model Development",
+        "Product Development Support",
+        "Startup Growth & Scaling",
+      ],
+    
+      whoFor:
+        "This programme is designed for innovators, startup founders, and aspiring entrepreneurs looking to refine ideas, develop products, and build scalable businesses.",
+    
+      extraInfo: `The Labs provide hands-on support, mentorship access, and strategic guidance that help early-stage ventures move from concept to execution while contributing to Africa’s growing innovation ecosystem.`,
     },
 ];
 
@@ -191,7 +245,7 @@ function WriteupBlock({ programme }: { programme: Programme }) {
         <h4 className="prog-writeup-section-title">Target Beneficiaries</h4>
         <p className="prog-writeup-who">{programme.whoFor}</p>
       </div>
-
+      {programme.showApplyButton && (
       <a
         href={programme.applyUrl}
         target="_blank"
@@ -209,6 +263,7 @@ function WriteupBlock({ programme }: { programme: Programme }) {
           />
         </svg>
       </a>
+      )}
     </div>
   );
 }
@@ -218,17 +273,16 @@ export default function Programmes() {
     <main className="programmes-page">
       <div className="programmes-hero">
         <p className="programmes-eyebrow">
-          JOIN OMEGA DIGITAL LITERACY INITIATIVE
+        EXPLORE OUR PROGRAMMES
         </p>
-        <h1 className="programmes-hero-title">
           <h1 className="programmes-hero-title">
-            Future-Ready
-            <span className="programmes-hero-highlight"> Digital Skills</span>
+          Empowering Future
+<span className="programmes-hero-highlight"> Innovators</span>
           </h1>
-        </h1>
         <p className="programmes-hero-sub">
-        Practical, hands-on programmes designed to build valuable skills, real-world experience, 
-        and confidence for success in today’s digital world.
+        Practical and impact-driven programmes designed to equip learners,
+    creators, and future founders with valuable digital skills, real-world
+    exposure, and opportunities for growth in today’s evolving world.
         </p>
       </div>
 
