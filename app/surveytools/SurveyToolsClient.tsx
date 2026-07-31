@@ -17,7 +17,7 @@ const bodyFont = DM_Sans({
 });
 
 // TODO: replace with the real WhatsApp waitlist invite link
-const WHATSAPP_WAITLIST_URL = "https://chat.whatsapp.com/PLACEHOLDER";
+const WHATSAPP_WAITLIST_URL = "https://chat.whatsapp.com/DZDnDKI87qJAVrJZHqRjQN?s=cl&p=a&ilr=0&amv=0";
 
 /* -------------------------------------------------------------------------- */
 /* Icons (inline, no external assets)                                        */
@@ -70,6 +70,80 @@ function ClockIcon() {
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.6" />
       <path d="M12 7v5l3.5 2" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function SurveyDocIcon() {
+  return (
+    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="4" width="32" height="40" rx="3" stroke="currentColor" strokeWidth="1.4" />
+      <path d="M15 14h18M15 21h18M15 28h10" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+      <path d="M15 36l4 4 8-8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+/* Animated matching-network graph — sits behind the hero copy.
+   Represents "researcher survey matched to a pool of respondents". */
+function HeroNetwork() {
+  const nodes: { x: number; y: number; r: number; accent?: boolean }[] = [
+    { x: 760, y: 90, r: 4 },
+    { x: 878, y: 150, r: 5, accent: true },
+    { x: 986, y: 86, r: 3.5 },
+    { x: 700, y: 226, r: 3.5 },
+    { x: 862, y: 264, r: 5 },
+    { x: 1002, y: 214, r: 4, accent: true },
+    { x: 1088, y: 300, r: 3.5 },
+    { x: 758, y: 346, r: 4 },
+    { x: 902, y: 402, r: 5, accent: true },
+    { x: 1034, y: 424, r: 3.5 },
+  ];
+
+  const links: [number, number][] = [
+    [0, 1],
+    [1, 2],
+    [0, 3],
+    [1, 4],
+    [3, 4],
+    [4, 5],
+    [2, 5],
+    [5, 6],
+    [4, 7],
+    [7, 8],
+    [8, 9],
+    [5, 8],
+  ];
+
+  return (
+    <svg
+      className="stw-hero-network"
+      viewBox="0 0 1160 500"
+      preserveAspectRatio="xMaxYMid meet"
+      aria-hidden="true"
+      focusable="false"
+    >
+      {links.map(([a, b], i) => (
+        <line
+          key={i}
+          className="stw-link"
+          x1={nodes[a].x}
+          y1={nodes[a].y}
+          x2={nodes[b].x}
+          y2={nodes[b].y}
+          style={{ animationDelay: `${(i % 6) * 0.4}s` }}
+        />
+      ))}
+      {nodes.map((n, i) => (
+        <circle
+          key={i}
+          className={`stw-node${n.accent ? " stw-node--accent" : ""}`}
+          cx={n.x}
+          cy={n.y}
+          r={n.r}
+          style={{ animationDelay: `${i * 0.35}s` }}
+        />
+      ))}
     </svg>
   );
 }
@@ -233,6 +307,15 @@ export default function SurveyToolsClient() {
 
       {/* Hero */}
       <header className="stw-hero">
+        <div className="stw-hero-decor" aria-hidden="true">
+          <HeroNetwork />
+          <div className="stw-hero-float stw-hero-float--a">
+            <SurveyDocIcon />
+          </div>
+          <div className="stw-hero-float stw-hero-float--b">
+            <ChartIcon />
+          </div>
+        </div>
         <div className="stw-container stw-hero-inner">
           <span className="stw-eyebrow stw-eyebrow--on-dark">Coming September 2026</span>
           <h1>Get your research data. Fast, verified, and analysis-ready.</h1>
@@ -243,7 +326,7 @@ export default function SurveyToolsClient() {
           </p>
           <div className="stw-hero-actions">
             <a
-              href={WHATSAPP_WAITLIST_URL}
+              href="https://chat.whatsapp.com/DZDnDKI87qJAVrJZHqRjQN?s=cl&p=a&ilr=0&amv=0"
               target="_blank"
               rel="noopener noreferrer"
               className="stw-btn stw-btn--primary"
@@ -553,26 +636,26 @@ export default function SurveyToolsClient() {
                 A product of Omega Digital Technology Innovations.
               </p>
             </div>
-            {/* <div>
+            <div>
               <h4>Quick Links</h4>
               <div className="stw-footer-links">
-                <a href="#how-it-works">How It Works</a>
-                <a href="#who-its-for">For Researchers</a>
-                <a href="#who-its-for">For Respondents</a>
+                <a href="#">How It Works</a>
+                <a href="#">For Researchers</a>
+                <a href="#">For Respondents</a>
                 <a href={WHATSAPP_WAITLIST_URL} target="_blank" rel="noopener noreferrer">
                   Join the Waitlist
                 </a>
               </div>
-            </div> */}
+            </div>
             <div>
               <h4>Contact</h4>
               <div className="stw-footer-links">
-                <a href="mailto:help.surveytools@gmail.com">Email</a>
+              <a href="mailto:help.surveytools@gmail.com">Email</a>
                 <a href="https://www.linkedin.com/company/surveyproapp/" target="_blank" rel="noopener noreferrer">Linkedin</a>
                 <a href="https://chat.whatsapp.com/DZDnDKI87qJAVrJZHqRjQN?s=cl&p=a&ilr=0&amv=0" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                 <a href="https://www.instagram.com/surveytools_?igsh=c2trNGRtMTZ6MjU1" target="_blank" rel="noopener noreferrer">Instagram</a>
                 <a href="https://x.com/SurveyTools_App?s=09" target="_blank" rel="noopener noreferrer">Twitter/X</a>
-              </div>
+               </div>
             </div>
           </div>
           <div className="stw-footer-bottom">
