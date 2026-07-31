@@ -41,6 +41,7 @@ export default function Navbar() {
           <li><Link href="/" onClick={closeMenu}>Home</Link></li>
           <li><Link href="/programs" onClick={closeMenu}>Programs</Link></li>
           <li><Link href="/portfolio" onClick={closeMenu}>Portfolio</Link></li>
+          <li><Link href="/surveytools" onClick={closeMenu}>SurveyTools</Link></li>
         </ul>
 
         {/* CTA Button */}
